@@ -10,10 +10,17 @@
                 <img class="pointer" src="assets/img/icons/loupe.png">
             </div>
         </div>
-        <div class="profile-container d-flex ai-center j-end">
-            <span class="pointer">Vorname Nachname</span>
+        <div class="profile-container d-flex ai-center j-end p-relative">
+            <span class="name pointer">Vorname Nachname</span>
             <img class="pointer" src="assets/img/avatar_1.png">
-            <img class="pointer" src="assets/img/icons/arrow_down_simple.png">
+            <img class="pointer" src="assets/img/icons/arrow_down_simple.png"
+                (click)="$event.stopPropagation(); toggleLogoutPopup()">
+            <div *ngIf="showPopup" class="overlay" (click)="toggleLogoutPopup()">
+                <div class="logout-popup p-absolute flex-center f-column" (click)="$event.stopPropagation()">
+                    <span class="pointer">Profil</span>
+                    <span class="pointer">Logout</span>
+                </div>
+            </div>
         </div>
     </div>
     <router-outlet>

@@ -46,6 +46,10 @@ body {
     align-items: flex-end;
 }
 
+.f-column {
+    flex-direction: column;
+}
+
 .p-relative {
     position: relative;
 }

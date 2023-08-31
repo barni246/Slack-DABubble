@@ -23,7 +23,8 @@
             </div>
             <div *ngIf="showProfilePopup" class="overlay" (click)="closeProfilePopup()">
                 <div class="profile-popup p-absolute d-flex f-column j-start" (click)="$event.stopPropagation()">
-                    <img class="close-icon p-absolute pointer" src="assets/img/icons/close.png" (click)="closeProfilePopup()">
+                    <img class="close-icon p-absolute pointer" src="assets/img/icons/close.png"
+                        (click)="closeProfilePopup()">
                     <span *ngIf="!showEditProfile" class="popup-header-text">Profil</span>
                     <span *ngIf="showEditProfile" class="popup-header-text">Dein Profil bearbeiten</span>
                     <img class="avatar-big mt-40 mb-40" src="assets/img/avatar_big.png">
@@ -66,11 +67,23 @@
 
         <!-- space for other main page divs -->
 
-        <div class="threads-container d-flex">
+        <div class="threads-container d-flex f-column">
             <img class="close-icon p-absolute pointer" src="assets/img/icons/close.png" (click)="closeProfilePopup()">
-            <div class="threads-header d-flex g-20">
-                <h2>Thread</h2>
-                <span># Entwicklerteam</span>
+            <div class="threads-header d-flex">
+                <span class="threads-headline">Thread<span class="threads-channel"># Entwicklerteam</span></span>
+            </div>
+            <div class="main-thread-container d-flex ai-start g-20">
+                <img class="thread-avatar" src="assets/img/avatar_small.png">
+                <div class="d-flex f-column g-10">
+                    <span class="thread-creator">Name Name<span>00:00 Uhr</span></span>
+                    <span class="thread-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque adipisci
+                        dolorum magni
+                        provident, ipsam, odit voluptatibus, repellendus sunt</span>
+                </div>
+            </div>
+            <div class="thread-divider d-flex ai-center g-20">
+                <span>2 Antworten</span>
+                <div class="thread-divider-line"></div>
             </div>
         </div>
     </div>

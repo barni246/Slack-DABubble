@@ -7,13 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Slack-DABuble';
-  showPopup: boolean = false;
+  showLogoutPopup: boolean = false;
+  showProfilePopup: boolean = false;
 
   toggleLogoutPopup(): void {
-    this.showPopup = !this.showPopup;
+    this.showLogoutPopup = !this.showLogoutPopup;
   }
 
   closeLogoutPopup(): void {
-    this.showPopup = false;
+    this.showLogoutPopup = false;
+  }
+
+  toggleProfilePopup(): void {
+    this.showProfilePopup = !this.showProfilePopup;
+  }
+
+  closeProfilePopup(): void {
+    this.showProfilePopup = false;
   }
 }

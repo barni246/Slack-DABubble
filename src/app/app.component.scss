@@ -27,7 +27,7 @@
             flex: 1;
 
             .search-field {
-                height: 60px;
+                height: 65px;
                 width: 90%;
                 background-color: white;
                 padding-left: 30px;
@@ -43,7 +43,8 @@
                     background: none;
 
                     &::placeholder {
-                        font-size: 20px;
+                        font-size: 22px;
+                        font-family: 'Nunito', sans-serif;
                     }
                 }
             }
@@ -57,7 +58,7 @@
 
             .name {
                 font-size: 30px;
-                font-weight: 500;
+                font-weight: 700;
             }
         }
     }
@@ -79,12 +80,67 @@
     height: 150px;
     width: 250px;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 30px;
     border-top-right-radius: 0;
-    gap: 20px;
+    gap: 45px;
 
     span {
         font-size: 24px;
-        font-weight: 500;
+        font-weight: 600;
     }
+}
+
+.profile-popup {
+    top: 110px;
+    right: 0;
+    width: 400px;
+    background-color: white;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    padding: 45px 40px;
+
+    span {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    a {
+        font-size: 18px;
+        font-weight: 600;
+        color: #535AF1;
+    }
+}
+
+.close-icon {
+    top: 40px;
+    right: 40px;
+}
+
+.avatar-big {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.popup-header-text {
+    font-size: 24px !important;
+}
+
+.online-dot {
+    width: 16px;
+    height: 16px;
+}
+
+.online-text {
+    font-size: 20;
+    font-weight: 400;
+    color: #92C83E;
+}
+
+.popup-email {
+    font-size: 18px;
+    font-weight: 400;
+    color: #535AF1;
+    margin-left: 47px;
 }

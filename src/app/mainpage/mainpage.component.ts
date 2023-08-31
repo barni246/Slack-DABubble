@@ -9,6 +9,7 @@ export class MainpageComponent {
   showLogoutPopup: boolean = false;
   showProfilePopup: boolean = false;
   showEditProfile: boolean = false;
+  hoveringIcon: boolean = false;
 
 
   /**

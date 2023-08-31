@@ -18,6 +18,7 @@
 
             .code-symbol {
                 transform: rotate(180deg);
+                transition: all 125 ease-in-out;
 
                 &:hover {
                     transform: none;

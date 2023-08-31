@@ -2,7 +2,10 @@
     <div class="main-page-header d-flex ai-center">
         <div class="logo-container flex-center">
             <img class="pointer" src="assets/img/logo/logo_&_name.png">
-            <img class="code-symbol pointer" src="assets/img/icons/code_symbol.png">
+            <img *ngIf="!hoveringIcon" class="code-symbol pointer" src="assets/img/icons/code_symbol.png"
+                (mouseenter)="hoveringIcon = true" (mouseleave)="hoveringIcon = false">
+            <img *ngIf="hoveringIcon" class="code-symbol pointer" src="assets/img/icons/code_symbol_purple.png"
+                (mouseenter)="hoveringIcon = true" (mouseleave)="hoveringIcon = false">
         </div>
         <div class="search-container flex-center">
             <div class="search-field d-flex ai-center">

@@ -76,7 +76,7 @@
 
 .logout-popup {
     top: 110px;
-    right: 0;
+    right: 20px;
     height: 150px;
     width: 250px;
     background-color: white;
@@ -92,7 +92,7 @@
 
 .profile-popup {
     top: 110px;
-    right: 0;
+    right: 20px;
     width: 400px;
     background-color: white;
     border-radius: 30px;
@@ -143,4 +143,17 @@
     font-weight: 400;
     color: #535AF1;
     margin-left: 47px;
+}
+
+.edit-profile-input {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 1px solid #ADB0D9;
+
+    &:focus-visible {
+        outline: none;
+        border: 1px solid #444DF2;
+    }
 }

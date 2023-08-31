@@ -61,7 +61,19 @@
             </div>
         </div>
     </div>
-    <router-outlet>
-        <h1>Components here</h1>
-    </router-outlet>
+
+    <div class="content d-flex j-end g-20">
+
+        <!-- space for other main page divs -->
+
+        <div class="threads-container d-flex">
+            <img class="close-icon p-absolute pointer" src="assets/img/icons/close.png" (click)="closeProfilePopup()">
+            <div class="threads-header d-flex g-20">
+                <h2>Thread</h2>
+                <span># Entwicklerteam</span>
+            </div>
+        </div>
+    </div>
+
+    <router-outlet></router-outlet>
 </div>

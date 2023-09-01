@@ -9,7 +9,10 @@ export class MainpageComponent {
   showLogoutPopup: boolean = false;
   showProfilePopup: boolean = false;
   showEditProfile: boolean = false;
-  hoveringIcon: boolean = false;
+  hoverCodeIcon: boolean = false;
+  hoverPlusIcon: boolean = false;
+  hoverSmileyIcon: boolean = false;
+  hoverAtIcon: boolean = false;
 
 
   /**

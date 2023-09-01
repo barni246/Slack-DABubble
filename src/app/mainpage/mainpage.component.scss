@@ -7,7 +7,7 @@
     flex-direction: column;
 
     .main-page-header {
-        height: 120px;
+        min-height: 110px;
         width: 100vw;
         max-width: 100%;
 
@@ -43,10 +43,10 @@
                     width: 100%;
                     border: none;
                     outline: none;
+                    font-size: 22px;
                     background: none;
 
                     &::placeholder {
-                        font-size: 22px;
                         font-family: 'Nunito', sans-serif;
                     }
                 }
@@ -168,16 +168,19 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 25px;
+    display: flex;
 
     .threads-container {
-        height: 100%;
+        // flex: 1;
+        max-height: calc(100% - 130px);
         width: 450px;
         background-color: white;
         border-radius: 30px;
         position: relative;
+        display: flex;
 
         .threads-header {
-            height: fit-content;
+            height: auto;
             padding: 31px 40px;
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
@@ -198,8 +201,17 @@
             }
         }
 
+        .threads-content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            overflow-y: scroll;
+            margin-bottom: 180px;
+        }
+
         .main-thread-container {
             padding: 30px 40px;
+            padding-bottom: 0;
         }
     }
 }
@@ -212,19 +224,19 @@
 .thread-creator {
     font-size: 18px;
     font-weight: 700;
+}
 
-    span {
-        font-size: 14px;
-        font-weight: 500;
-        color: #686868;
-        margin-left: 20px;
-    }
+.thread-time {
+    font-size: 14px;
+    font-weight: 500;
+    color: #686868;
+    margin-left: 20px;
 }
 
 .thread-text {
     font-size: 18px;
     font-weight: 400;
-    padding: 15px;
+    padding: 15px 20px;
     border-radius: 20px;
     border-top-left-radius: 0;
     background-color: #ECEEFE;
@@ -232,7 +244,8 @@
 
 .thread-divider {
     width: 100%;
-    
+    margin-top: 30px;
+
     span {
         font-size: 16px;
         font-weight: 400;
@@ -246,5 +259,98 @@
         flex-grow: 1;
         background-color: rgba(171, 174, 216, 0.85);
         margin-right: 40px;
+    }
+}
+
+.thread-container-reverse {
+    flex-direction: row-reverse;
+
+    .thread-message-box-reverse {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+    }
+
+    .thread-time-reverse {
+        margin-left: 0 !important;
+        margin-right: 20px;
+    }
+
+    .thread-text-reverse {
+        border-radius: 30px !important;
+        border-top-right-radius: 0 !important;
+        background-color: #797EF3 !important;
+        color: white;
+        font-size: 500;
+    }
+}
+
+.message-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    height: 140px;
+    border: 1px solid rgba(171, 174, 216, 0.85);
+    border-radius: 20px;
+    background-color: white;
+
+    textarea {
+        height: 60%;
+        outline: none;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 20px;
+        resize: none;
+        overflow: scroll;
+        font-size: 16px;
+        font-weight: 500;
+        color: #686868;
+
+        &::placeholder {
+            font-family: 'Nunito', sans-serif;
+        }
+    }
+
+    .message-icons {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 15px;
+        justify-content: space-between;
+
+        img {
+            object-fit: contain;
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            padding: 10px;
+            margin-left: 5px;
+        }
+
+        img:first-child {
+            height: 15px;
+            width: 15px;
+            margin-left: 0;
+        }
+
+        .icon-divider-line {
+            height: 40px;
+            width: 1px;
+            background-color: #ADB0D9;
+            margin-left: 5px;
+        }
+
+        .message-hover-icon {
+            &:hover {
+                border-radius: 50%;
+                background-color: #ECEEFE;
+                transform: scale(1.1);
+            }
+        }
+
+        .message-send-icon {
+            &:hover {
+                filter: opacity(0.7)
+            }
+        }
     }
 }

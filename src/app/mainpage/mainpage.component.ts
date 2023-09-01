@@ -13,6 +13,7 @@ export class MainpageComponent {
   hoverPlusIcon: boolean = false;
   hoverSmileyIcon: boolean = false;
   hoverAtIcon: boolean = false;
+  hoverAddClientIcon: boolean = false;
 
 
   /**

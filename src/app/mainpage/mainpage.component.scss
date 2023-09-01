@@ -179,41 +179,66 @@
         position: relative;
         display: flex;
 
-        .threads-header {
-            height: auto;
-            padding: 31px 40px;
-            border-top-left-radius: 30px;
-            border-top-right-radius: 30px;
-            align-items: center;
-            -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
-            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
-
-            .threads-headline {
-                font-size: 24px;
-                font-weight: 700;
-            }
-
-            .threads-channel {
-                font-size: 15px;
-                font-weight: 500;
-                color: #797EF3;
-                margin-left: 20px;
-            }
-        }
-
-        .threads-content {
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-            overflow-y: scroll;
-            margin-bottom: 180px;
-        }
-
-        .main-thread-container {
-            padding: 30px 40px;
-            padding-bottom: 0;
+        .threads-channel {
+            font-size: 15px;
+            font-weight: 500;
+            color: #797EF3;
+            margin-left: 20px;
         }
     }
+
+    .main-thread-container {
+        padding: 30px 40px;
+        padding-bottom: 0;
+    }
+}
+
+.threads-content,
+.chat-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin-bottom: 180px;
+}
+
+.chat-container {
+    flex: 1;
+    max-height: calc(100% - 130px);
+    width: 450px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+}
+
+.threads-header,
+.chat-header {
+    height: 100px;
+    padding: 0 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    align-items: center;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+    justify-content: space-between;
+
+}
+
+.threads-headline,
+.chat-headline {
+    font-size: 24px;
+    font-weight: 700;
+
+    img {
+        margin-left: 10px;
+    }
+}
+
+b {
+    font-size: 28px;
+    font-weight: 800;
+    margin-right: 10px;
 }
 
 .thread-avatar {
@@ -351,6 +376,48 @@
             &:hover {
                 filter: opacity(0.7)
             }
+        }
+    }
+}
+
+.add-client-icon {
+    border-radius: 50px;
+    background-color: #ECEEFE;
+    padding: 8px;
+    width: 25px;
+    height: 25px;
+    
+    img {
+        object-fit: contain;
+    }
+}
+
+.avatar-small {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -10px;
+}
+
+.assigned-client-count {
+    font-size: 22px;
+    font-weight: 700;
+    color: #686868;
+    margin-left: 10px;
+}
+
+.assigned-clients-box {
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    &:hover {
+        background-color: #ECEEFE;
+        border-radius: 50px;
+
+        span {
+            color: #797EF3;
         }
     }
 }
